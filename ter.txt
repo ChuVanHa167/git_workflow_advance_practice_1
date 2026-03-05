@@ -1,0 +1,546 @@
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git remote -v
+origin  https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git (fetch)
+origin  https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git (push)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git remote add github https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git remo
+te -v
+github  https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git (fetch)
+github  https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git (push)
+origin  https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git (fetch)
+origin  https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git (push)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git remo
+te set-url --add --push origin https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git remote set-url --add --push origin https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git                         
+                                           
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin main
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Everything up-to-date
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout -b develop
+Switched to a new branch 'develop'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+* develop
+  main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin develop
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 2.61 KiB | 891.00 KiB/s, done.  
+Total 6 (delta 0), reused 6 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_advance_practice_2/pull/new/develop
+remote:
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ * [new branch]      develop -> develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_advance_practice_1/pull/new/develop
+remote:
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+ * [new branch]      develop -> develop
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git branch
+* develop
+  main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout -b feature/login
+Switched to a new branch 'feature/login'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch feature/login
+nothing to commit, working tree clean
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch feature/login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        login.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git diff
+
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git add 
+login.html
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch feature/login
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   login.html
+
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git comm
+it -m "feature: add login page"
+[feature/login 4544096] feature: add login page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 login.html
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git pull
+ origin develop
+From https://github.com/ChuVanHa167/git_workflow_advance_practice_1
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin feature/login
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 164.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature/login' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_advance_practice_2/pull/new/feature/login
+remote:
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ * [new branch]      feature/login -> feature/login
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 164.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature/login' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_advance_practice_1/pull/new/feature/login
+remote:
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+ * [new branch]      feature/login -> feature/login
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout develop
+Switched to branch 'develop'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merg
+e feature/login
+Updating e77a522..4544096
+Fast-forward
+ login.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 login.html
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+   e77a522..4544096  develop -> develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   e77a522..4544096  develop -> develop
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch -d feature/login
+Deleted branch feature/login (was 4544096).
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+* develop
+  main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout develop
+Already on 'develop'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout -b bugfix/login-error
+Switched to a new branch 'bugfix/login-error'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+* bugfix/login-error
+  develop
+  main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch bugfix/login-error
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed) 
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   login.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git add 
+login.html
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch bugfix/login-error
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   login.html
+
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git comm
+it -am "fix: login validation bug"
+[bugfix/login-error 1ab4656] fix: login validation bug
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+* bugfix/login-error
+  develop
+  main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout develop
+Switched to branch 'develop'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merg
+e bugfix/login-error
+Updating 4544096..1ab4656
+Fast-forward
+ login.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin develop
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 344 bytes | 86.00 KiB/s, done.  
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+   4544096..1ab4656  develop -> develop
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   4544096..1ab4656  develop -> develop
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout -b release/v1.0.0
+Switched to a new branch 'release/v1.0.0'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+  bugfix/login-error
+  develop
+  main
+* release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git comm
+it -am "release: version 1.0.0"
+On branch release/v1.0.0
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        version.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git add 
+version.txt
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git comm
+it -m "release: version 1.0.0"
+[release/v1.0.0 9ee0d0e] release: version 1.0.0
+ 1 file changed, 1 insertion(+)
+ create mode 100644 version.txt
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin release/v1.0.0
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'release/v1.0.0' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_advance_practice_2/pull/new/release/v1.0.0
+remote:
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ * [new branch]      release/v1.0.0 -> release/v1.0.0        
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 177.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'release/v1.0.0' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_advance_practice_1/pull/new/release/v1.0.0
+remote:
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+ * [new branch]      release/v1.0.0 -> release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+  bugfix/login-error
+  develop
+  main
+* release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout -b hotfix/cart-ui
+Switched to a new branch 'hotfix/cart-ui'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git add 
+login.html
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch hotfix/cart-ui
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   login.html
+
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git comm
+it -m "fix cart UI done"
+[hotfix/cart-ui e5a814d] fix cart UI done
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout release/v1.0.0
+Switched to branch 'release/v1.0.0'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merg
+e hotfix/cart-ui
+Updating 9ee0d0e..e5a814d
+Fast-forward
+ login.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin release/v1.0.0
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 194.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+   9ee0d0e..e5a814d  release/v1.0.0 -> release/v1.0.0        
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 389.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   9ee0d0e..e5a814d  release/v1.0.0 -> release/v1.0.0        
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout man
+error: pathspec 'man' did not match any file(s) known to git
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merg
+e release/v1.0.0
+Updating e77a522..e5a814d
+Fast-forward
+ login.html  | 3 +++
+ version.txt | 1 +
+ 2 files changed, 4 insertions(+)
+ create mode 100644 login.html
+ create mode 100644 version.txt
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git tag 
+v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git tag 
+v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin main
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   e77a522..e5a814d  main -> main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin v1.0.0
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ * [new tag]         v1.0.0 -> v1.0.0
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+ * [new tag]         v1.0.0 -> v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout develop
+Switched to branch 'develop'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merg
+e release/v1.0.0
+Updating 1ab4656..e5a814d
+Fast-forward
+ login.html  | 3 ++-
+ version.txt | 1 +
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 version.txt
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+   1ab4656..e5a814d  develop -> develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   1ab4656..e5a814d  develop -> develop
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+  bugfix/login-error
+  develop
+  hotfix/cart-ui
+* main
+  release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout -b hotfix/payment-crash
+Switched to a new branch 'hotfix/payment-crash'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git branch    
+  bugfix/login-error
+  develop
+  hotfix/cart-ui
+* hotfix/payment-crash
+  main
+  release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git stat
+us
+On branch hotfix/payment-crash
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed) 
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   login.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git add 
+login.html
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git bran
+ch
+  bugfix/login-error
+  develop
+  hotfix/cart-ui
+* hotfix/payment-crash
+  main
+  release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git comm
+it -am "hotfix: payment crash"
+[hotfix/payment-crash 1c0b64e] hotfix: payment crash
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merge hotfix/payment-crash
+Updating e5a814d..1c0b64e
+Fast-forward
+ login.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin main
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 414 bytes | 207.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   e5a814d..1c0b64e  main -> main
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git checkout develop
+Switched to branch 'develop'
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git merg
+e hotfix/payment-crash
+Updating e5a814d..1c0b64e
+Fast-forward
+ login.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git push
+ origin develop
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 414 bytes | 207.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_2.git
+   e5a814d..1c0b64e  develop -> develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_advance_practice_1.git
+   e5a814d..1c0b64e  develop -> develop
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git chec
+kout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\github-repo-clone\git_workflow_advance_practice_1>git branch
+  bugfix/login-error
+  develop
+  hotfix/cart-ui
+  hotfix/payment-crash
+* main
+  release/v1.0.0
+
+C:\github-repo-clone\git_workflow_advance_practice_1>
