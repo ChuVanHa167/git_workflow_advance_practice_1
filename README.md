@@ -8,6 +8,7 @@ Team gồm nhiều developer nên cần quy trình Git rõ ràng để:
 * tích hợp code an toàn
 * release phiên bản ổn định
 * sửa lỗi production nhanh
+
 Team quyết định sử dụng **Gitflow Workflow**.
 
 # Branch trong dự án
@@ -71,3 +72,23 @@ Thực hành:
 * Gitflow đầy đủ
 * Quy trình commit chuẩn
 * Push code lên nhiều remote repo
+
+# Khi phát triển một tính năng:
+- Bước 1: git chechout -b(chuyển và tạo nhánh mới)
+- Bước 2: code(done)
+- Bước 3: git status
+- Bước 4: git diff(xem thay đổi chưa add của các file hiệ tại)
+- Bước 5: git add file 1 file 2 file3(không add hết mà add từng file tránh add những file ẩn)
+- Bước 6: git status
+- Bước 7: git commit
+- Bước 8: git pull(nếu k conflig thì ok nếu có conflig thì quay về bước 2)
+- Bước 9: git push
+
+# Lưu ý đặt tên:
+Feature/*: * ở featue thể hiện một tính năng(vd: feature/login).
+
+Release/v*: * ở release thể hiện phiên bản phát hành(vd: hiện tại là v1.2.0 thì release/v1.3.0)
+
+Hotfix/v*: * ở hotfix thể hiện phiên bản sửa lỗi(v0.0.0 thì số thứ 3 thể hiện phiên bản của hotfix và số thứ 2 thể hiện release)
+
+
