@@ -15,6 +15,7 @@ Team quyết định sử dụng **Gitflow Workflow**.
 ## Main
 Nhánh **production**
 Chỉ chứa code đang chạy thật.
+
 Nguyên tắc:
 * Không commit trực tiếp
 * Chỉ merge từ `release` hoặc `hotfix`
@@ -29,6 +30,7 @@ Ví dụ:
 feature/login
 feature/cart
 feature/payment
+
 Quy tắc:
 * Tách từ `develop`
 * Merge lại `develop`
@@ -36,6 +38,7 @@ Quy tắc:
 
 ## Bugfix
 Nếu tester phát hiện bug ở môi trường dev.
+
 Quy tắc:
 * Tách từ `develop`
 * Fix bug
@@ -44,34 +47,78 @@ Quy tắc:
 ## Release
 Khi chuẩn bị phát hành.
 Tách từ `develop`.
+
 Chỉ được phép:
 * fix bug nhỏ
 * update version
-Sau khi ổn định:
-merge vào
+  
+Sau khi ổn định, merge vào:
 * main
 * develop
 
 ## Hotfix
 Nếu production bị lỗi nghiêm trọng.
 Tách từ `main`.
+
 Fix xong merge vào:
 * main
 * develop
 * release (nếu release đang tồn tại)
 
 # Gitflow tổng thể
-Main → Dev → Feature → Dev → Bugfix → Dev → Release → Main
+`Main → Dev → Feature → Dev → Bugfix → Dev → Release → Main`
+
 Nếu production lỗi:
-Main → Hotfix → Main & Dev
+`Main → Hotfix → Main & Dev`
+
 Nếu khách test release chưa ok:
-Release → Hotfix → Release
+`Release → Hotfix → Release`
 
 # Mục tiêu repo
 Thực hành:
 * Gitflow đầy đủ
 * Quy trình commit chuẩn
 * Push code lên nhiều remote repo
+  
+# Cần nhớ:
+_**hiện tại:**_
+
+origin(tên mặc định) -> repo 1 (this repo)
+
+github (tên tự đặt) -> repo 2(trên github)
+
+_**Nhớ:**_
+
+`git push origin main` push chỉ repo 1
+
+`git push github main` push chỉ repo 2
+
+`git remote -v` kiểm tra remote
+
+`git remote set-url --add --push origin repo_2` nghĩa là:
+
+```
+origin
+ ├── push → repo_1
+ └── push → repo_2
+```
+
+`git remote show origin` xem push URLs của origin
+
+`git remote set-url --delete --push origin <repo_url>` xóa push của repo khỏi origin
+
+thêm remote 3 đặt tên repo3
+```
+git remote add repo3 https://github.com/ChuVanHa167/git_workflow_advance_practice_3.git
+``` 
+
+Cấu hình origin push nhiều url:
+```
+git remote set-url --add --push origin repo1_url
+git remote set-url --add --push origin repo2_url
+git remote set-url --add --push origin repo3_url
+```
+khi đó `git push origin main` sẽ push tới 3 repo cùng lúc
 
 # Khi phát triển một tính năng:
 - Bước 1: git chechout -b(chuyển và tạo nhánh mới)
